@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ui_framework_program
 {
-    public partial class Form1 : Form
+    public partial class FormNewList : Form
     {
-        public Form1()
+        public FormNewList()
         {
             InitializeComponent();
         }

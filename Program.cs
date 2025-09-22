@@ -16,7 +16,7 @@ namespace ui_framework_program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main());
+            Application.Run(new mainForm());
         }
     }
 }
