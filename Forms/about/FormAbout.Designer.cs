@@ -32,7 +32,7 @@
             this.panelTextBox = new System.Windows.Forms.Panel();
             this.labelAboutInfo = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.buttonReturn = new System.Windows.Forms.Button();
+            this.buttonReturnAbout = new System.Windows.Forms.Button();
             this.panelTextBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,34 +69,32 @@
             this.panelLogo.Size = new System.Drawing.Size(809, 243);
             this.panelLogo.TabIndex = 2;
             // 
-            // buttonReturn
+            // buttonReturnAbout
             // 
-            this.buttonReturn.BackColor = System.Drawing.Color.Transparent;
-            this.buttonReturn.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.buttonReturn.FlatAppearance.BorderSize = 0;
-            this.buttonReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonReturn.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReturn.Location = new System.Drawing.Point(387, 556);
-            this.buttonReturn.Name = "buttonReturn";
-            this.buttonReturn.Size = new System.Drawing.Size(64, 23);
-            this.buttonReturn.TabIndex = 3;
-            this.buttonReturn.Text = "back";
-            this.buttonReturn.UseVisualStyleBackColor = false;
+            this.buttonReturnAbout.BackColor = System.Drawing.Color.Transparent;
+            this.buttonReturnAbout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonReturnAbout.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonReturnAbout.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturnAbout.ForeColor = System.Drawing.Color.Black;
+            this.buttonReturnAbout.Location = new System.Drawing.Point(387, 603);
+            this.buttonReturnAbout.Name = "buttonReturnAbout";
+            this.buttonReturnAbout.Size = new System.Drawing.Size(67, 33);
+            this.buttonReturnAbout.TabIndex = 3;
+            this.buttonReturnAbout.Text = "back";
+            this.buttonReturnAbout.UseVisualStyleBackColor = false;
             // 
             // FormAbout
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackgroundImage = global::ui_framework_program.Properties.Resources.listformbg;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(833, 729);
-            this.Controls.Add(this.buttonReturn);
+            this.Controls.Add(this.buttonReturnAbout);
             this.Controls.Add(this.panelLogo);
             this.Controls.Add(this.panelTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAbout";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "about";
             this.panelTextBox.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -107,6 +105,6 @@
         private System.Windows.Forms.Panel panelTextBox;
         private System.Windows.Forms.Label labelAboutInfo;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.Button buttonReturnAbout;
     }
 }

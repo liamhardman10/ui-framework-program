@@ -67,14 +67,13 @@ namespace ui_framework_program
             this.buttonGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGitHub.Image = global::ui_framework_program.Properties.Resources.github;
             this.buttonGitHub.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonGitHub.Location = new System.Drawing.Point(0, 684);
+            this.buttonGitHub.Location = new System.Drawing.Point(0, 641);
             this.buttonGitHub.Name = "buttonGitHub";
             this.buttonGitHub.Size = new System.Drawing.Size(175, 45);
             this.buttonGitHub.TabIndex = 4;
             this.buttonGitHub.Text = "GitHub";
             this.buttonGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonGitHub.UseVisualStyleBackColor = false;
-            this.buttonGitHub.Click += new System.EventHandler(this.buttonGitHub_Click);
             // 
             // buttonMyLists
             // 
@@ -83,7 +82,7 @@ namespace ui_framework_program
             this.buttonMyLists.FlatAppearance.BorderSize = 0;
             this.buttonMyLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMyLists.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMyLists.Location = new System.Drawing.Point(0, 190);
+            this.buttonMyLists.Location = new System.Drawing.Point(0, 145);
             this.buttonMyLists.Name = "buttonMyLists";
             this.buttonMyLists.Size = new System.Drawing.Size(175, 45);
             this.buttonMyLists.TabIndex = 3;
@@ -97,7 +96,7 @@ namespace ui_framework_program
             this.buttonNewList.FlatAppearance.BorderSize = 0;
             this.buttonNewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewList.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewList.Location = new System.Drawing.Point(0, 145);
+            this.buttonNewList.Location = new System.Drawing.Point(0, 100);
             this.buttonNewList.Name = "buttonNewList";
             this.buttonNewList.Size = new System.Drawing.Size(175, 45);
             this.buttonNewList.TabIndex = 2;
@@ -107,16 +106,16 @@ namespace ui_framework_program
             // buttonAbout
             // 
             this.buttonAbout.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonAbout.FlatAppearance.BorderSize = 0;
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAbout.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.Color.Black;
-            this.buttonAbout.Location = new System.Drawing.Point(0, 100);
+            this.buttonAbout.Location = new System.Drawing.Point(0, 686);
             this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(175, 45);
+            this.buttonAbout.Size = new System.Drawing.Size(175, 43);
             this.buttonAbout.TabIndex = 1;
-            this.buttonAbout.Text = "+ about";
+            this.buttonAbout.Text = "about glace";
             this.buttonAbout.UseVisualStyleBackColor = false;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 

@@ -15,7 +15,7 @@ namespace ui_framework_program
         public FormAbout()
         {
             InitializeComponent();
-            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
+            this.buttonReturnAbout.Click += new System.EventHandler(this.buttonReturn_Click);
         }
 
         private void textBoxAbout_TextChanged(object sender, EventArgs e)
@@ -31,8 +31,6 @@ namespace ui_framework_program
         private void buttonReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-            
-            
         }
     }
 }

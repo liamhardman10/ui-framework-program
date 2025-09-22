@@ -19,6 +19,7 @@ namespace ui_framework_program
             
             this.buttonGitHub.Click += new System.EventHandler(this.buttonGitHub_Click);
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            this.buttonNewList.Click += new System.EventHandler(this.buttonNewList_Click);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +32,8 @@ namespace ui_framework_program
 
         }
 
+
+        #region Main form-specific button events
         private void buttonGitHub_Click(object sender, EventArgs e)
         {
             // cannot find a solution to the button's inoperability. i have tried 3 different solutions with no success.
@@ -40,43 +43,48 @@ namespace ui_framework_program
 
             Process.Start(new ProcessStartInfo
             {
-                FileName = "http://www.github.com/liamhardman10",
+                FileName = "https://github.com/liamhardman10/ui-framework-program",
                 UseShellExecute = true
             });
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-            // Only open if not already active
             if (!(activeForm is FormAbout))
             {
-                openChildForm(new FormAbout());
-                buttonAbout.Enabled = false; // Disable after opening
+                var aboutForm = new FormAbout();
+                aboutForm.FormClosed += (s, args) =>
+                {
+                    buttonAbout.Enabled = true;
+                    activeForm = null;
+                };
+                openChildForm(aboutForm);
+                buttonAbout.Enabled = false;
             }
         }
 
-        private void buttonReturn_Click(object sender, EventArgs e)
-        { 
-            if (activeForm != null) // this needs to be fixed in the morning.
-                buttonAbout.Enabled = true; // re-enable the button if FormAbout is closed
-            activeForm.Close();  
-        }
-
-
         private void buttonNewList_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormNewList());
+            if (!(activeForm is FormNewList))
+            {
+                var listForm = new FormNewList();
+                listForm.FormClosed += (s, args) =>
+                {
+                    buttonNewList.Enabled = true;
+                    activeForm = null;
+                };
+                openChildForm(listForm);
+                buttonNewList.Enabled = false;
+            }
         }
+
+        #endregion
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {
-                // If closing FormAbout, re-enable the button
-                if (activeForm is FormAbout)
-                    buttonAbout.Enabled = true;
-
                 activeForm.Close();
             }
             activeForm = childForm;
@@ -88,11 +96,6 @@ namespace ui_framework_program
             childForm.BringToFront();
             childForm.Show();
         }
-
-
-
-
-
 
         private void customizeDesign()
         {
